@@ -166,7 +166,7 @@ class _GettingStartedState extends State<GettingStarted> {
                 Expanded(
                   child: SingleChildScrollView(
                     child: Align(
-                      alignment: Alignment.center,
+                      alignment: Alignment.centerLeft,
                       child: Wrap(
                         spacing: 20.0,
                         runSpacing: 15.0,
@@ -201,7 +201,7 @@ class _GettingStartedState extends State<GettingStarted> {
                                         width: 40.0,
                                         height: 40.0,
                                       ),
-                                      SizedBox(height: 8),
+                                      SizedBox(height: 5),
                                       Text(
                                         serviceNames[index],
                                         style: TextStyle(
