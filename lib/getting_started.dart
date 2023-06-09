@@ -225,6 +225,7 @@ class _GettingStartedState extends State<GettingStarted> {
           ),
         ],
       ),
+
       bottomNavigationBar: CustomPaint(
         painter: LinePainter(
           selectedIndex: _selectedIndex,
