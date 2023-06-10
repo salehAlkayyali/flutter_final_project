@@ -222,7 +222,7 @@ class _SignUpState extends State<SignUp> {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.pushReplacementNamed(context, '/login'); // Use route name instead of MaterialPageRoute
                                   },
                                   child: Text(
                                     'Sign In',
@@ -236,10 +236,7 @@ class _SignUpState extends State<SignUp> {
                             SizedBox(height: 10.0),
                             ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => GettingStarted()),
-                                );
+                                Navigator.pushReplacementNamed(context, '/gettingstarted'); // Use route name instead of MaterialPageRoute
                               },
                               child: Text(
                                 'Sign Up',

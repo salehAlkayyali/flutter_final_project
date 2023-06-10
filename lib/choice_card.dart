@@ -41,10 +41,7 @@ class _ChoiceCardState extends State<ChoiceCard> {
                         child: IconButton(
                           icon: Icon(Icons.arrow_back_ios_outlined, color: Colors.white),
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => GettingStarted()),
-                            );
+                            Navigator.pushReplacementNamed(context, '/gettingstarted');
                           },
                         ),
                       ),
@@ -146,10 +143,7 @@ class _ChoiceCardState extends State<ChoiceCard> {
               ),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => CardInfo()),
-                  );
+                  Navigator.pushReplacementNamed(context, '/cardinfo');
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.transparent,

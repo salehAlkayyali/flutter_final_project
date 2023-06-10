@@ -53,12 +53,7 @@ class Screen2 extends StatelessWidget {
 
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Screen3(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, '/screen3'); // Use route name instead of MaterialPageRoute
                   },
                   child: Text(
                     'NEXT',

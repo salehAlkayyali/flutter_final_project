@@ -104,27 +104,11 @@ class _MoreState extends State<More> {
               _selectedIndex = index;
             });
             if (index == 0) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => GettingStarted(),
-                ),
-              );
+              Navigator.pushNamed(context, '/gettingstarted');
             } else if (index == 1) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ItemDetails(),
-                ),
-              );
-            }
-            else if (index == 2) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Profile(),
-                ),
-              );
+              Navigator.pushNamed(context, '/itemdetails');
+            } else if (index == 2) {
+              Navigator.pushNamed(context, '/profile');
             }
           },
           backgroundColor: Colors.lightBlueAccent,

@@ -173,12 +173,7 @@ class _GettingStartedState extends State<GettingStarted> {
                         children: List.generate(serviceIcons.length, (index) {
                           return GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => ChoiceCard(),
-                                ),
-                              );
+                              Navigator.pushNamed(context, '/choicecard');
                             },
                             child: Column(
                               children: [
@@ -239,26 +234,11 @@ class _GettingStartedState extends State<GettingStarted> {
               _selectedIndex = index;
             });
             if (index == 1) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ItemDetails(),
-                ),
-              );
+              Navigator.pushNamed(context, '/itemdetails');
             } else if (index == 2) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Profile(),
-                ),
-              );
+              Navigator.pushNamed(context, '/profile');
             } else if (index == 3) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => More(),
-                ),
-              );
+              Navigator.pushNamed(context, '/more');
             }
           },
           backgroundColor: Colors.lightBlueAccent,

@@ -17,10 +17,8 @@ class _LoginPageState extends State<LoginPage> {
 
 
   void _signUp() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => SignUp()),
-    );
+    Navigator.pushNamed(context, '/signup');
+
   }
 
   @override
@@ -168,11 +166,9 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             SizedBox(height: 10.0),
                             ElevatedButton(
-                              onPressed: () {
-                                Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => GettingStarted()),
-                                );
+                                onPressed: () {
+                                  Navigator.pushReplacementNamed(context, '/gettingstarted'); // Use route name instead of MaterialPageRoute
+                                 // Use route name instead of MaterialPageRoute
                               },
                               child: Text(
                                 'Login',
@@ -200,10 +196,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SignUp()),
-                );
+                Navigator.pushNamed(context, '/signup');
               },
               child: Container(
                 color: Colors.white,

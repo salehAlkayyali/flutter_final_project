@@ -34,7 +34,6 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        height: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.blue, Colors.lightBlue],
@@ -145,12 +144,7 @@ class Profile extends StatelessWidget {
                           SizedBox(width: 10),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => LoginPage(),
-                                ),
-                              );
+                              Navigator.pushNamed(context, '/login');
                             },
                             child: Text(
                               'SIGN OUT',
@@ -171,6 +165,7 @@ class Profile extends StatelessWidget {
           ),
         ),
       ),
+
       bottomNavigationBar: CustomPaint(
         painter: LinePainter(
           selectedIndex: _selectedIndex,
@@ -180,26 +175,11 @@ class Profile extends StatelessWidget {
           currentIndex: _selectedIndex,
           onTap: (int index) {
             if (index == 0) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => GettingStarted(),
-                ),
-              );
+              Navigator.pushNamed(context, '/gettingstarted');
             } else if (index == 1) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ItemDetails(),
-                ),
-              );
+              Navigator.pushNamed(context, '/itemdetails');
             } else if (index == 3) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => More(),
-                ),
-              );
+              Navigator.pushNamed(context, '/more');
             }
           },
           backgroundColor: Colors.lightBlueAccent,

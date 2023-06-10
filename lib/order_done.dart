@@ -18,10 +18,7 @@ class OrderDone extends StatelessWidget {
                   IconButton(
                     icon: Icon(Icons.close),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => GettingStarted()),
-                      );
+                      Navigator.pushReplacementNamed(context, '/gettingstarted');
                     },
                   ),
                 ],
@@ -78,12 +75,7 @@ class OrderDone extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => GettingStarted(),
-                      ),
-                    );
+                    Navigator.pushReplacementNamed(context, '/gettingstarted');
                   },
                   child: Text(
                     'GO TO HOME',

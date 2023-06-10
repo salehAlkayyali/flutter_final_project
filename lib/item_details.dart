@@ -49,27 +49,11 @@ class _ItemDetailsState extends State<ItemDetails> {
               _selectedIndex = index;
             });
             if (index == 0) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => GettingStarted(),
-                ),
-              );
+              Navigator.pushNamed(context, '/gettingstarted');
             } else if (index == 2) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Profile(),
-                ),
-              );
-            }
-            else if (index == 3) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => More(),
-                ),
-              );
+              Navigator.pushNamed(context, '/profile');
+            } else if (index == 3) {
+              Navigator.pushNamed(context, '/more');
             }
           },
           backgroundColor: Colors.lightBlueAccent,

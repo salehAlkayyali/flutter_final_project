@@ -54,12 +54,7 @@ class Screen3 extends StatelessWidget {
 
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LoginPage(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, '/login'); // Use route name instead of MaterialPageRoute
                   },
                   child: Text(
                     'NEXT',
